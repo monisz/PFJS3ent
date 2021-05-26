@@ -1,0 +1,574 @@
+@import "variables";
+@import "habitaciones";
+@import "servicios";
+@import "galeria";
+@import "contacto";
+
+%subtitulos {
+    color: $colorazulespecial;
+    font-weight: bold;
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $colorbody;
+    font-family: $letraGeneral;
+}
+
+.titulo-pagina {
+    font-size: 240%;
+    text-align: center;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+    color:#02878b;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: $espaciadoletras;
+}
+
+/* MENU */
+.header-nav {
+    background-color: $colordestacado;
+    font-weight: bold;
+    .header-nav-logo {
+            border-radius: 50%;
+        }
+    .header-nav-menu {
+        width: $anchototal;
+        padding-left: 20%;
+        justify-content: space-evenly;
+        letter-spacing: $espaciadoletras;
+        .color-item {
+        color: $colorblanco;
+            &:hover {
+                color: $colorazulespecial;
+            }
+        }
+    }
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.color-item {
+    color: white;
+}
+/* FIN MENU */
+
+/* CARRUSEL */
+.section-carrusel {
+    img {
+        margin-top: -25vh;
+    }
+    .section-carrusel-texto {
+        display: flex;
+        justify-content: center;
+        .section-carrusel-titulo {
+            font-weight: bold;
+            font-size: 5rem;
+            font-family: 'Dancing Script', cursive;
+            color: whitesmoke;
+            text-shadow: 5px 5px 4px black;
+            position: absolute;
+            top: 15%;
+            letter-spacing: $espaciadoletras;
+        }
+    }
+}
+.flecha-carrusel {
+    text-align: center;
+}
+a .fas {
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px black;
+}
+/* FIN CARRUSEL */
+
+/* VENTA */
+.section-venta {
+    display: flex;
+    margin: 9% 0;
+    .section-venta-titulo {
+        @extend %subtitulos;
+        text-align: center;
+        animation: zoomIn 6s 2s;
+    }
+    .section-venta-parrafo {
+        font-size: 1.25rem;
+        text-align: justify;
+        padding: 0 5%;
+    }
+}
+/* FIN VENTA */
+
+/* GALERIA INDEX */
+.section-galeria {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    list-style-type: none;
+    .section-galeria-imagen {
+        width: 18rem;
+        &:hover{
+            transform: scale(1.4);
+        }
+    }
+}
+/* FIN GALERIA INDEX */
+
+/* TESTIMONIOS */
+@keyframes opiniones {
+    0% {opacity: 0;}
+    25% {opacity: 0.25}
+    50% {opacity: 0.5;}
+    75% {opacity: 0.75}
+    100% {opacity: 1;}
+}
+
+.opiniones {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1.1fr 2fr;
+    grid-template-rows: 0.8fr 2fr;
+    grid-template-areas: 
+    "titulo titulo"
+    "imagen texto";
+    gap: 0.5rem 0;
+    justify-items:center;
+    align-items: center;
+    .opiniones-titulo {
+        grid-area: titulo;
+        text-align: center;
+        animation: opiniones 10s;
+        @extend %subtitulos;
+    }
+    .opiniones-imagen {
+        grid-area: imagen;
+        .opiniones-imagen-img {
+            border-radius: 5%;
+        }
+    }
+    .opiniones-texto {
+        grid-area: texto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .opiniones-detalle {
+            font-size: 14px;
+            font-style: italic;
+            width: 14rem;
+            height: 15rem;
+            margin: 1rem;
+            padding: 1rem 1rem;
+            border: solid 1px $colordestacado;
+            box-shadow: 0 0 10px $colordestacado;
+            border-radius: 5%;
+            .fas {
+                margin-bottom: 10%;
+                color: $colorazulespecial;
+            }
+            .far {
+                margin-bottom: 10%;
+                color: $colorazulespecial;
+            }
+            h4 {
+                font-weight: bold;
+                font-size: 1.2rem;
+                text-align: center;
+                padding-bottom: 2%;
+            }
+        }
+    }
+}
+
+.contenedor-footer {
+    background-color: $colordestacado;
+    margin-top: 8vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .contenedor-footer-leyenda {
+        font-weight: bold;
+        font-size: 3rem;
+        color: white;
+        text-shadow: 2px 2px 5px black;
+        letter-spacing: $espaciadoletras*4;
+        margin: 3% 3% 0 3%;
+    }
+    .contenedor-footer-detalle {
+        width: 70%;
+        font-size: 1rem;
+        font-weight: bold;
+        display: flex;
+        padding: 2% 0 0 5%;
+        flex-direction: column;
+        .fas {
+            color: $colorazulespecial;
+            font-size: 20px;
+            margin-right: 2%;
+        }
+    }
+    .contenedor-footer-redes {
+        width: 25%;
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+        margin-right: 5%;
+        a {
+            margin-right: 5%;
+            .fab {
+                color: $colorazulespecial;
+                font-size: 3.2rem;
+                
+            }
+        }
+    }
+    .contenedor-footer-copyright {
+        width: $anchototal;
+        margin: 1% 2% 0 2%;
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+}
+/* FIN FOOTER */
+
+
+/* MEDIA QUERIES */
+@media (min-width: 992px) {
+    .header-nav {
+        height: 70px;
+        .header-nav-logo {
+            margin-top: 80px;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .modal-tamano {
+        max-width: 85vw;
+    }
+}
+
+@media (max-width: 1200px) {
+    .section-carrusel {
+        img {
+            margin-top: 0;
+        }
+    }
+    .section-galeria {
+        margin-top: 5%;
+        .section-galeria-imagen {
+            margin-bottom: 5%;
+        }
+    }
+    .opiniones {
+        grid-template-rows: 2fr 2fr;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 
+        "titulo titulo titulo imagen imagen imagen"
+        "texto texto texto texto texto texto";
+        margin: 5rem 0 2rem 0;
+        .opiniones-titulo {
+            padding-left: 5rem;
+        }
+    }
+    .restoBar {
+        margin: 10% 0;
+        .restoBar-item {
+            padding: 2%;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .header-nav-logo{
+        width: 50%;
+    }
+    .section-carrusel {
+        margin-top: 8vh;
+        .section-carrusel-texto {
+            .section-carrusel-titulo {
+                font-size: 4rem;
+            }
+        }
+    }
+    .opiniones {
+        margin-top: 3rem;
+        grid-template-rows: 1fr 2fr 2fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "titulo titulo titulo" 
+        "imagen imagen imagen"
+        "texto texto texto";
+        .opiniones-titulo {
+            padding-left: 0;
+        }
+    }     
+    .titulo-pagina {
+        margin-top: 9rem;
+    }
+    .habitacion {
+        .habitacion-tipo {
+            flex-wrap: wrap;
+            margin: 8% 0;
+            .habitacion-tipo-imagen {
+                width: 80%;
+            }
+            .habitacion-tipo-info {
+                width: $anchototal;
+                .habitacion-tipo-info-nombre {
+                    width: $anchototal;
+                    text-align: center;
+                }
+                .habitacion-tipo-info-detalle {
+                    width: $anchototal;
+                    padding: 2% 2%;
+                    text-align: center;
+                }
+                .habitacion-tipo-info-items {
+                    margin-left: 35%;
+                    width: 50%;
+                }
+                .habitacion-tipo-info-reserva {
+                    margin-top: 2%;
+                }
+            }
+        }
+    }
+    .habitacion-todas {
+        margin: 3% 2%;
+    }
+    .restoBar {
+        .restoBar-item {
+            margin: 3% 1%;
+            padding: 3%;
+        }
+    }
+    .formulario {
+        margin-left: 2vw;
+        width: 96vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-venta {
+        margin: 7% 0;
+        .section-venta-titulo {
+            font-size: 1.7rem;  
+        }
+        .section-venta-parrafo {
+            font-size: 1.1rem;
+            padding: 3% 5% 0 5%;
+        }
+    }
+    .opiniones {
+        grid-template-rows: 1fr 2fr 4fr;
+        .opiniones-titulo {
+            font-size: 1.7rem;
+        }
+    }     
+    .contenedor-footer {
+        .contenedor-footer-leyenda {
+            font-size: 1.7rem;
+            letter-spacing: $espaciadoletras;
+        }
+        .contenedor-footer-redes {
+            .fab {
+                font-size: 2.9rem;
+                margin-right: 3%;
+            }
+        }
+    }
+    .habitacion {
+        .habitacion-tipo {
+            .habitacion-tipo-info {
+                .habitacion-tipo-info-reserva {
+                    .habitacion-tipo-info-reserva-boton {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+    }
+    .gastronomia {
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 0 10%;
+        .gastronomia-presentacion {
+            width: $anchototal;
+            .gastronomia-presentacion-titulo {
+                font-size: 1.8rem;
+                padding: 2% 0;
+            }
+        }
+        .gastronomia-imagen {
+            width: $anchototal;
+            padding: 3% 1%;
+        }
+    }
+    .spa {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 10%;
+        .spa-presentacion {
+            width: $anchototal;
+            .spa-presentacion-titulo {
+                font-size: 1.8rem;
+                padding: 2% 0;
+            }
+        }
+        .spa-imagen {
+            width: $anchototal;
+            padding: 3% 1%;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .header-nav-logo {
+        width: 40%;
+    }
+    .section-carrusel {
+        margin-top: 11vh;
+        .section-carrusel-texto {
+            .section-carrusel-titulo {
+                font-size: 2.7rem;
+            }
+        }
+    }
+    a .fas {
+        font-size: 1.5rem;
+    }
+    .section-venta {
+        .section-venta-titulo {
+            font-size: 1.4rem;
+        }
+        .section-venta-parrafo {
+            font-size: 0.9rem;
+        }
+    }
+    .section-galeria {
+        justify-content: center;
+        .section-galeria-imagen {
+            width: $anchototal;
+            padding: 0 1%;
+        }
+        .ocultar {
+            display: none;
+        }
+    }
+    .opiniones {
+        margin-top: 0;
+        .opiniones-titulo {
+            font-size: 1.4rem;
+        }
+        .opiniones-texto {
+            .opiniones-detalle {
+                h4 {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+    .contenedor-footer {
+        .contenedor-footer-leyenda {
+            letter-spacing:unset;
+        }
+        .contenedor-footer-detalle {
+            width: $anchototal;
+            padding-left: 10%;
+        }
+        .contenedor-footer-redes {
+            width: $anchototal;
+            justify-content: center;
+            margin: 0;
+            .fab {
+                margin: 2%;
+            }
+        }
+    }
+    .habitacion {
+        .habitacion-tipo {
+            .habitacion-tipo-imagen {
+                width: 90%;
+            }
+            .habitacion-tipo-info {
+                .habitacion-tipo-info-nombre {
+                    font-size: 24px;
+                }
+                .habitacion-tipo-info-items {
+                    margin-left: 20%;
+                }
+                .habitacion-tipo-info-reserva {
+                    .habitacion-tipo-info-reserva-boton {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+    .habitacion-todas {
+        font-size: 1.1rem;
+    }
+    .restoBar {
+        .restoBar-item {
+            padding: 4%;
+            max-width: $anchototal;
+            img {
+                max-width: $anchototal;
+            }
+        }
+    }
+}
+
+@media (max-width: 512px) {
+    .opiniones {
+        margin: 0;
+        grid-template-rows: 1fr 2fr 6fr;
+        .opiniones-imagen {
+            width: 95%;
+            .opiniones-imagen-img {
+                width: $anchototal;
+            }
+        }
+    }     
+}
+
+@media (max-width: 400px) {
+    .section-carrusel {
+        margin-top: 12vh;
+        .section-carrusel-texto {
+            .section-carrusel-titulo {
+                font-size: 2rem;
+            }
+        }
+    }
+    .section-venta {
+        .section-venta-titulo {
+            font-size: 1.1rem;
+        }
+        .section-venta-parrafo {
+            font-size: 0.9rem;
+        }
+    }
+    .galeria {
+        li {
+            .boton {
+                img {
+                    width: $anchototal;
+                }
+            }  
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .titulo-pagina {
+        font-size: 190%;
+        margin-top: 6.2rem;
+    }
+}
+/* FIN MEDIA QUERIES */

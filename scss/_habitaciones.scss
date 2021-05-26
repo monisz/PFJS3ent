@@ -1,0 +1,76 @@
+.formularioFechas {
+    display: none;
+}
+
+.habitacion {
+    display: flex;
+    justify-content:space-around;
+    flex-direction: column;
+    .habitacion-tipo {
+        margin: 4% 1% 4% 1%;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        flex-direction: row;
+        .habitacion-tipo-imagen {
+            width: 40%;
+            border-radius: 2%;
+            box-shadow: 2px 2px 10px black;
+        }
+        .habitacion-tipo-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-around;
+            align-items: center;
+            margin-top: 4%;
+            width: 60%;
+            .habitacion-tipo-info-nombre {
+                color: $colorazulespecial;
+                width: 33%;
+                font-weight: bold;
+                font-size: 30px;
+                text-align: center;
+                padding: 0 1%;
+            }
+            .habitacion-tipo-info-detalle {
+                width: 42%;
+                padding-right: 6%;
+                font-weight: bolder;
+            }
+            .habitacion-tipo-info-items {
+                width: 20%;
+                list-style-image: url("../imagenes/check.png");
+            }
+            .habitacion-tipo-info-reserva {
+                width: $anchototal;
+                margin-top: 2%;
+                display: flex;
+                justify-content:space-around;
+                color: #02878b;
+                font-size: 30px;
+                font-weight: bold;
+                margin-right: 4rem;
+                .habitacion-tipo-info-reserva-boton {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+
+.habitacion-todas {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.modal-reserva {
+    background-color: $colorbody;
+    .modal-reserva-encabezado {
+        background-color: rgb(250, 210, 135);
+    }
+    .modal-reserva-pie {
+        background-color: rgb(250, 210, 135);
+    }
+}

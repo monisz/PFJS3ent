@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Titulo pagina -->
+    <title>Relax Beach Resort • Habitaciones</title>
+    
+    <!-- Description -->
+    <meta name="description" content="Te invitamos a descubrir nuestras lujosas habitaciones">
+    
+    <!-- Keywords -->
+    <meta name="keywords" content="habitaciones, lujo, confort, studio, family duplex, suite, playa">
+    
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Links a JS -->
+    <script src="./js/variables.js" defer></script>
+    <script src="./js/arrays.js" defer></script>
+    <script src="./js/main.js" defer></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/e3ca58f027.js" crossorigin="anonymous"></script>
+
+    <!-- Mi css -->
+    <link rel="stylesheet" href="css/estilosNueva.css">
+
+    <!-- Tipografía -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>  
+        <!-- Nav -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light header-nav">
+            <a class="navbar-brand" href="index.html">
+                <img class="header-nav-logo" src="imagenes/nuevoLogo.jpg" alt="logo Relax">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <div class="navbar-nav mr-auto ml-auto header-nav-menu">
+                    <a class="nav-link color-item  active" href="index.html">INICIO</a>
+                    <a class="nav-link color-item" href="habitaciones.html">HABITACIONES</a>
+                    <a class="nav-link color-item" href="servicios.html">SERVICIOS</a>
+                    <a class="nav-link color-item" href="galeria.html">GALERIA</a>
+                    <a class="nav-link color-item" href="contacto.html">CONTACTO</a>
+                </div>
+            </div>
+            <div class="habitacion-tipo-info-reserva">
+                <button id="reserva" type="button" class="btn btn-primary habitacion-tipo-info-reserva-boton" data-toggle="modal" data-target="#exampleModal">Ver Reserva</button>
+            </div>
+        </nav>
+        <!-- Fin Nav -->
+
+        <!-- Titulo -->
+        <div>
+            <h1 class="titulo-pagina">HABITACIONES</h1>
+        </div>
+        <!-- Fin Titulo -->
+    </header>
+    <!-- Fin Header -->
+    
+    <main>
+        <!-- Section Formulario -->
+        <section>
+            <form action="#" class="formulario formularioFechas" id="formulario">
+                <!-- Fecha de entrada -->
+                <div class="form-group row">
+                    <label for="entrada" class="col-md-4 col-form-label">Fecha de entrada</label>
+                    <div class="col-md-4">
+                        <input type="date" class="form-control" id="entrada">
+                    </div>
+                </div>
+                <!-- Fin Fecha de entrada -->
+
+                <!-- Fecha de salida -->
+                <div class="form-group row">
+                    <label for="salida" class="col-md-4 col-form-label">Fecha de salida</label>
+                    <div class="col-md-4">
+                        <input type="date" class="form-control" id="salida">
+                    </div>
+                </div>
+                <!-- Fin Fecha de salida -->
+
+                <!-- Cantidad de personas -->
+                <div class="form-group row">
+                    <label for="personas" class="col-md-4 col-form-label" >Cantidad de personas</label>
+                    <div class="col-md-4">
+                        <input type="number" class="form-control" id="cantidadPersonas">
+                    </div>
+                </div>
+                <!-- Fin Cantidad de personas -->  
+
+                <div id="ingresoErroneo">
+                    
+                </div>
+            
+                <div id="agregadoAReserva">
+
+                </div>
+
+                <!-- Boton reservar -->
+                <div class="form-group row">
+                    <div class="col-md-10">
+                        <button type="button" class="btn btn-primary btn-lg" id="reservar">Reservar</button>
+                    </div>
+                </div>
+                <!-- Fin boton reservar -->
+            </form>
+        </section>
+        <!-- Fin Section Formulario -->
+
+
+
+        <!-- Section Habitaciones -->
+        <section class="habitacion" id="habitacionesJS">
+            <!-- <div class="habitacion-tipo">
+
+            </div> -->
+        </section> 
+        <!-- Fin Section Habitaciones -->
+
+        <!-- Aclaracion para todas las habitaciones -->
+        <div>
+            <p class="habitacion-todas">
+                Todas las habitaciones cuentan con aire acondicionado, Minibar, 
+                caja fuerte y conexión Wi-Fi sin cargo.
+            </p>
+        </div>
+        <!-- Fin Aclaracion para todas las habitaciones -->    
+    </main>
+
+
+    <!-- Modal para mostrar la reserva -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content modal-reserva">
+                <div class="modal-header modal-reserva-encabezado">
+                    <h5 class="modal-title" id="exampleModalLabel">Detalle de su reserva</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modalReserva">
+                <!-- Acá va el modal de reserva que muestra -->
+                </div>
+                <div class="modal-footer modal-reserva-pie">
+                    <h4>Total de la reserva: $ <span id="precioTotal"></span></h4>
+                    <button type="button" class="btn btn-primary" onclick="generarPago()">Confirmar reserva y pagar</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="contenedor-footer">
+        <div class="contenedor-footer-leyenda">
+            <h3>Sueña, disfruta, recuerda... Vuelve!</h3>
+            <hr>
+        </div>
+        <div class="contenedor-footer-detalle">
+            <div>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    Av. de la Costa 456 - Villa Paraíso
+                </p>
+            </div>
+            <div>
+                <p>
+                    <i class="fas fa-phone-alt"></i>
+                    0256-2545-25445
+                </p>
+            </div>
+            <div>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    relaxbeach@gmail.com
+                </p>
+            </div>            
+        </div>
+        <div class="contenedor-footer-redes">
+            <a href="https://www.facebook.com/monicaviviana.szewczuk/" target="_blank">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="https://www.instagram.com/soylubaok/" target="_blank">
+                <i class="fab fa-instagram-square"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank">
+                <i class="fab fa-twitter-square"></i>
+            </a>
+            <a href="https://wa.me/541167015256" target="_blank">
+                <i class="fab fa-whatsapp-square"></i> 
+            </a>
+            
+        </div>
+        <div class="contenedor-footer-copyright">
+            <p>Copyright © 2021 - Diseño y desarrollo web: Mónica Szewczuk</p>
+        </div>
+    </footer>
+    <!-- Fin Footer -->
+    
+    <!-- Script Bootstrap -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    
+
+
+</body>
+</html>

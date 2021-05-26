@@ -1,0 +1,550 @@
+.formularioFechas {
+  display: none; }
+
+.habitacion {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column; }
+  .habitacion .habitacion-tipo {
+    margin: 4% 1% 4% 1%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row; }
+    .habitacion .habitacion-tipo .habitacion-tipo-imagen {
+      width: 40%;
+      border-radius: 2%;
+      box-shadow: 2px 2px 10px black; }
+    .habitacion .habitacion-tipo .habitacion-tipo-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 4%;
+      width: 60%; }
+      .habitacion .habitacion-tipo .habitacion-tipo-info .habitacion-tipo-info-nombre {
+        color: #00a2a8;
+        width: 33%;
+        font-weight: bold;
+        font-size: 30px;
+        text-align: center;
+        padding: 0 1%; }
+      .habitacion .habitacion-tipo .habitacion-tipo-info .habitacion-tipo-info-detalle {
+        width: 42%;
+        padding-right: 6%;
+        font-weight: bolder; }
+      .habitacion .habitacion-tipo .habitacion-tipo-info .habitacion-tipo-info-items {
+        width: 20%;
+        list-style-image: url("../imagenes/check.png"); }
+      .habitacion .habitacion-tipo .habitacion-tipo-info .habitacion-tipo-info-reserva {
+        width: 100%;
+        margin-top: 2%;
+        display: flex;
+        justify-content: space-around;
+        color: #02878b;
+        font-size: 30px;
+        font-weight: bold;
+        margin-right: 4rem; }
+        .habitacion .habitacion-tipo .habitacion-tipo-info .habitacion-tipo-info-reserva .habitacion-tipo-info-reserva-boton {
+          width: 30%; }
+
+.habitacion-todas {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-top: 5%;
+  text-align: center; }
+
+.modal-reserva {
+  background-color: #f5f5f5; }
+  .modal-reserva .modal-reserva-encabezado {
+    background-color: #fad287; }
+  .modal-reserva .modal-reserva-pie {
+    background-color: #fad287; }
+
+.gastronomia {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5% 0; }
+  .gastronomia .gastronomia-presentacion {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+    .gastronomia .gastronomia-presentacion .gastronomia-presentacion-titulo {
+      text-align: center;
+      font-size: 2rem; }
+    .gastronomia .gastronomia-presentacion .gastronomia-presentacion-descripcion {
+      font-size: 18px; }
+  .gastronomia .gastronomia-imagen {
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    align-items: center; }
+    .gastronomia .gastronomia-imagen img {
+      width: 100%; }
+
+.restoBar {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 6% 0;
+  align-items: center;
+  text-align: center;
+  height: auto;
+  flex-wrap: wrap; }
+  .restoBar .restoBar-item {
+    background-color: lightblue;
+    margin: 1% 0.5%;
+    padding: 2% 1.5% 1% 1.5%;
+    border-radius: 5%; }
+    .restoBar .restoBar-item h4 {
+      margin-top: 10px;
+      color: #3b3b3b;
+      font-weight: 500; }
+
+.spa {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5% 0; }
+  .spa .spa-presentacion {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+    .spa .spa-presentacion .spa-presentacion-titulo {
+      text-align: center;
+      font-size: 2rem; }
+    .spa .spa-presentacion .spa-presentacion-descripcion {
+      font-size: 18px; }
+  .spa .spa-imagen {
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    align-items: center; }
+    .spa .spa-imagen img {
+      width: 100%; }
+
+.galeria {
+  margin: 4% 1%;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+  .galeria li .boton {
+    border: none; }
+    .galeria li .boton img {
+      width: 400px;
+      max-height: 275px;
+      padding-bottom: 2%; }
+  .galeria li .modal-encabezado {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: 0; }
+    .galeria li .modal-encabezado .cruz {
+      font-size: 2rem; }
+  .galeria li .modal-imagen {
+    width: 100%;
+    height: auto; }
+
+.formulario {
+  background-color: lightblue;
+  padding: 1%;
+  width: 70vw;
+  margin-left: 15vw; }
+
+.ubicacion {
+  margin-top: 10vh; }
+  .ubicacion .ubicacion-titulo {
+    align-self: center; }
+
+.gastronomia .gastronomia-presentacion .gastronomia-presentacion-titulo, .spa .spa-presentacion .spa-presentacion-titulo, .ubicacion .ubicacion-titulo, .section-venta .section-venta-titulo, .opiniones .opiniones-titulo {
+  color: #00a2a8;
+  font-weight: bold; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #f5f5f5;
+  font-family: "Raleway", sans-serif; }
+
+.titulo-pagina {
+  font-size: 240%;
+  text-align: center;
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+  color: #02878b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px; }
+
+/* MENU */
+.header-nav {
+  background-color: #fdbc42;
+  font-weight: bold; }
+  .header-nav .header-nav-logo {
+    border-radius: 50%; }
+  .header-nav .header-nav-menu {
+    width: 100%;
+    padding-left: 20%;
+    justify-content: space-evenly;
+    letter-spacing: 2px; }
+    .header-nav .header-nav-menu .color-item {
+      color: white; }
+      .header-nav .header-nav-menu .color-item:hover {
+        color: #00a2a8; }
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .color-item {
+  color: white; }
+
+/* FIN MENU */
+/* CARRUSEL */
+.section-carrusel img {
+  margin-top: -25vh; }
+
+.section-carrusel .section-carrusel-texto {
+  display: flex;
+  justify-content: center; }
+  .section-carrusel .section-carrusel-texto .section-carrusel-titulo {
+    font-weight: bold;
+    font-size: 5rem;
+    font-family: 'Dancing Script', cursive;
+    color: whitesmoke;
+    text-shadow: 5px 5px 4px black;
+    position: absolute;
+    top: 15%;
+    letter-spacing: 2px; }
+
+.flecha-carrusel {
+  text-align: center; }
+
+a .fas {
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px black; }
+
+/* FIN CARRUSEL */
+/* VENTA */
+.section-venta {
+  display: flex;
+  margin: 9% 0; }
+  .section-venta .section-venta-titulo {
+    text-align: center;
+    animation: zoomIn 6s 2s; }
+  .section-venta .section-venta-parrafo {
+    font-size: 1.25rem;
+    text-align: justify;
+    padding: 0 5%; }
+
+/* FIN VENTA */
+/* GALERIA INDEX */
+.section-galeria {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  list-style-type: none; }
+  .section-galeria .section-galeria-imagen {
+    width: 18rem; }
+    .section-galeria .section-galeria-imagen:hover {
+      transform: scale(1.4); }
+
+/* FIN GALERIA INDEX */
+/* TESTIMONIOS */
+@keyframes opiniones {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0.25; }
+  50% {
+    opacity: 0.5; }
+  75% {
+    opacity: 0.75; }
+  100% {
+    opacity: 1; } }
+
+.opiniones {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1.1fr 2fr;
+  grid-template-rows: 0.8fr 2fr;
+  grid-template-areas: "titulo titulo" "imagen texto";
+  gap: 0.5rem 0;
+  justify-items: center;
+  align-items: center; }
+  .opiniones .opiniones-titulo {
+    grid-area: titulo;
+    text-align: center;
+    animation: opiniones 10s; }
+  .opiniones .opiniones-imagen {
+    grid-area: imagen; }
+    .opiniones .opiniones-imagen .opiniones-imagen-img {
+      border-radius: 5%; }
+  .opiniones .opiniones-texto {
+    grid-area: texto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .opiniones .opiniones-texto .opiniones-detalle {
+      font-size: 14px;
+      font-style: italic;
+      width: 14rem;
+      height: 15rem;
+      margin: 1rem;
+      padding: 1rem 1rem;
+      border: solid 1px #fdbc42;
+      box-shadow: 0 0 10px #fdbc42;
+      border-radius: 5%; }
+      .opiniones .opiniones-texto .opiniones-detalle .fas {
+        margin-bottom: 10%;
+        color: #00a2a8; }
+      .opiniones .opiniones-texto .opiniones-detalle .far {
+        margin-bottom: 10%;
+        color: #00a2a8; }
+      .opiniones .opiniones-texto .opiniones-detalle h4 {
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-align: center;
+        padding-bottom: 2%; }
+
+.contenedor-footer {
+  background-color: #fdbc42;
+  margin-top: 8vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .contenedor-footer .contenedor-footer-leyenda {
+    font-weight: bold;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    letter-spacing: 8px;
+    margin: 3% 3% 0 3%; }
+  .contenedor-footer .contenedor-footer-detalle {
+    width: 70%;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    padding: 2% 0 0 5%;
+    flex-direction: column; }
+    .contenedor-footer .contenedor-footer-detalle .fas {
+      color: #00a2a8;
+      font-size: 20px;
+      margin-right: 2%; }
+  .contenedor-footer .contenedor-footer-redes {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 5%; }
+    .contenedor-footer .contenedor-footer-redes a {
+      margin-right: 5%; }
+      .contenedor-footer .contenedor-footer-redes a .fab {
+        color: #00a2a8;
+        font-size: 3.2rem; }
+  .contenedor-footer .contenedor-footer-copyright {
+    width: 100%;
+    margin: 1% 2% 0 2%;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold; }
+
+/* FIN FOOTER */
+/* MEDIA QUERIES */
+@media (min-width: 992px) {
+  .header-nav {
+    height: 70px; }
+    .header-nav .header-nav-logo {
+      margin-top: 80px; } }
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .modal-tamano {
+    max-width: 85vw; } }
+
+@media (max-width: 1200px) {
+  .section-carrusel img {
+    margin-top: 0; }
+  .section-galeria {
+    margin-top: 5%; }
+    .section-galeria .section-galeria-imagen {
+      margin-bottom: 5%; }
+  .opiniones {
+    grid-template-rows: 2fr 2fr;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "titulo titulo titulo imagen imagen imagen" "texto texto texto texto texto texto";
+    margin: 5rem 0 2rem 0; }
+    .opiniones .opiniones-titulo {
+      padding-left: 5rem; }
+  .restoBar {
+    margin: 10% 0; }
+    .restoBar .restoBar-item {
+      padding: 2%; } }
+
+@media (max-width: 992px) {
+  .header-nav-logo {
+    width: 50%; }
+  .section-carrusel {
+    margin-top: 8vh; }
+    .section-carrusel .section-carrusel-texto .section-carrusel-titulo {
+      font-size: 4rem; }
+  .opiniones {
+    margin-top: 3rem;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "titulo titulo titulo"  "imagen imagen imagen" "texto texto texto"; }
+    .opiniones .opiniones-titulo {
+      padding-left: 0; }
+  .titulo-pagina {
+    margin-top: 9rem; }
+  .habitacion .habitacion-tipo {
+    flex-wrap: wrap;
+    margin: 8% 0; }
+    .habitacion .habitacion-tipo .habitacion-tipo-imagen {
+      width: 80%; }
+    .habitacion .habitacion-tipo .habitacion-tipo-info {
+      width: 100%; }
+      .habitacion .habitacion-tipo .habitacion-tipo-info .habitacion-tipo-info-nombre {
+        width: 100%;
+        text-align: center; }
+      .habitacion .habitacion-tipo .habitacion-tipo-info .habitacion-tipo-info-detalle {
+        width: 100%;
+        padding: 2% 2%;
+        text-align: center; }
+      .habitacion .habitacion-tipo .habitacion-tipo-info .habitacion-tipo-info-items {
+        margin-left: 35%;
+        width: 50%; }
+      .habitacion .habitacion-tipo .habitacion-tipo-info .habitacion-tipo-info-reserva {
+        margin-top: 2%; }
+  .habitacion-todas {
+    margin: 3% 2%; }
+  .restoBar .restoBar-item {
+    margin: 3% 1%;
+    padding: 3%; }
+  .formulario {
+    margin-left: 2vw;
+    width: 96vw; } }
+
+@media (max-width: 768px) {
+  .section-venta {
+    margin: 7% 0; }
+    .section-venta .section-venta-titulo {
+      font-size: 1.7rem; }
+    .section-venta .section-venta-parrafo {
+      font-size: 1.1rem;
+      padding: 3% 5% 0 5%; }
+  .opiniones {
+    grid-template-rows: 1fr 2fr 4fr; }
+    .opiniones .opiniones-titulo {
+      font-size: 1.7rem; }
+  .contenedor-footer .contenedor-footer-leyenda {
+    font-size: 1.7rem;
+    letter-spacing: 2px; }
+  .contenedor-footer .contenedor-footer-redes .fab {
+    font-size: 2.9rem;
+    margin-right: 3%; }
+  .habitacion .habitacion-tipo .habitacion-tipo-info .habitacion-tipo-info-reserva .habitacion-tipo-info-reserva-boton {
+    width: 40%; }
+  .gastronomia {
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding: 0 10%; }
+    .gastronomia .gastronomia-presentacion {
+      width: 100%; }
+      .gastronomia .gastronomia-presentacion .gastronomia-presentacion-titulo {
+        font-size: 1.8rem;
+        padding: 2% 0; }
+    .gastronomia .gastronomia-imagen {
+      width: 100%;
+      padding: 3% 1%; }
+  .spa {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%; }
+    .spa .spa-presentacion {
+      width: 100%; }
+      .spa .spa-presentacion .spa-presentacion-titulo {
+        font-size: 1.8rem;
+        padding: 2% 0; }
+    .spa .spa-imagen {
+      width: 100%;
+      padding: 3% 1%; } }
+
+@media (max-width: 576px) {
+  .header-nav-logo {
+    width: 40%; }
+  .section-carrusel {
+    margin-top: 11vh; }
+    .section-carrusel .section-carrusel-texto .section-carrusel-titulo {
+      font-size: 2.7rem; }
+  a .fas {
+    font-size: 1.5rem; }
+  .section-venta .section-venta-titulo {
+    font-size: 1.4rem; }
+  .section-venta .section-venta-parrafo {
+    font-size: 0.9rem; }
+  .section-galeria {
+    justify-content: center; }
+    .section-galeria .section-galeria-imagen {
+      width: 100%;
+      padding: 0 1%; }
+    .section-galeria .ocultar {
+      display: none; }
+  .opiniones {
+    margin-top: 0; }
+    .opiniones .opiniones-titulo {
+      font-size: 1.4rem; }
+    .opiniones .opiniones-texto .opiniones-detalle h4 {
+      font-size: 1.1rem; }
+  .contenedor-footer .contenedor-footer-leyenda {
+    letter-spacing: unset; }
+  .contenedor-footer .contenedor-footer-detalle {
+    width: 100%;
+    padding-left: 10%; }
+  .contenedor-footer .contenedor-footer-redes {
+    width: 100%;
+    justify-content: center;
+    margin: 0; }
+    .contenedor-footer .contenedor-footer-redes .fab {
+      margin: 2%; }
+  .habitacion .habitacion-tipo .habitacion-tipo-imagen {
+    width: 90%; }
+  .habitacion .habitacion-tipo .habitacion-tipo-info .habitacion-tipo-info-nombre {
+    font-size: 24px; }
+  .habitacion .habitacion-tipo .habitacion-tipo-info .habitacion-tipo-info-items {
+    margin-left: 20%; }
+  .habitacion .habitacion-tipo .habitacion-tipo-info .habitacion-tipo-info-reserva .habitacion-tipo-info-reserva-boton {
+    width: 50%; }
+  .habitacion-todas {
+    font-size: 1.1rem; }
+  .restoBar .restoBar-item {
+    padding: 4%;
+    max-width: 100%; }
+    .restoBar .restoBar-item img {
+      max-width: 100%; } }
+
+@media (max-width: 512px) {
+  .opiniones {
+    margin: 0;
+    grid-template-rows: 1fr 2fr 6fr; }
+    .opiniones .opiniones-imagen {
+      width: 95%; }
+      .opiniones .opiniones-imagen .opiniones-imagen-img {
+        width: 100%; } }
+
+@media (max-width: 400px) {
+  .section-carrusel {
+    margin-top: 12vh; }
+    .section-carrusel .section-carrusel-texto .section-carrusel-titulo {
+      font-size: 2rem; }
+  .section-venta .section-venta-titulo {
+    font-size: 1.1rem; }
+  .section-venta .section-venta-parrafo {
+    font-size: 0.9rem; }
+  .galeria li .boton img {
+    width: 100%; } }
+
+@media (max-width: 350px) {
+  .titulo-pagina {
+    font-size: 190%;
+    margin-top: 6.2rem; } }
+
+/* FIN MEDIA QUERIES */

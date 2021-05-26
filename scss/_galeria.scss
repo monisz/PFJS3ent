@@ -1,0 +1,29 @@
+.galeria {
+    margin: 4% 1%;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    li {
+        .boton {
+            border: none;
+            img {
+                width: 400px;
+                max-height: 275px;
+                padding-bottom: 2%;
+            }
+        }
+        .modal-encabezado {
+            padding-top: 0;
+            padding-bottom: 0;
+            border-bottom: 0;
+            .cruz {
+                font-size: 2rem;
+            }
+        }
+        .modal-imagen {
+            width: $anchototal;
+            height: auto;
+        }
+    }
+}
